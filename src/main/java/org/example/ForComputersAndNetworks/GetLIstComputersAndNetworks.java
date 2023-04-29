@@ -11,11 +11,9 @@ public class GetLIstComputersAndNetworks {
     }
 
     public boolean createdActualListComputersAndNetworks(WebDriver driver) throws InterruptedException {
-//        WebDriver driver = ChromeDriverCreator.getChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://catalog.onliner.by/");
         WebElement computersAndNetworkSection = driver.findElement(By.xpath("//li[@data-id='2']"));
-        System.out.println(computersAndNetworkSection);
         computersAndNetworkSection.click();
         Thread.sleep(2000);
         WebElement listComputersAndNetwork = driver.findElement(By.xpath("//div[@class='catalog-navigation-list__wrapper']"));

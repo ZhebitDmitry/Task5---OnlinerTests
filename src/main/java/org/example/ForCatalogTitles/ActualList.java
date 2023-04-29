@@ -22,7 +22,7 @@ public class ActualList {
         List<WebElement> webelements;
         List<String> textOfWebElements = new ArrayList();
         webelements = driver.findElements(By.xpath("//span[@class='catalog-navigation-classifier__item-title-wrapper']"));
-        webelements.stream().peek(el->textOfWebElements.add(el.getText())).collect(Collectors.toList());
+        webelements.stream().peek(el -> textOfWebElements.add(el.getText())).collect(Collectors.toList());
 
         driver.quit();
         return textOfWebElements;
